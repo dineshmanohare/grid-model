@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested-grid</title>
+    <style>
+        .gridcontainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr 2fr);
+            grid-gap: 10px;
+            grid-auto-rows: minmax(200px, auto);
+        }
+
+        .gridcontainer div {
+            padding: 10px;
+            background-color: grey;
+        }
+
+        .gridcontainer>div:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        #div1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <div id="div1">
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+        </div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, amet?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, amet?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, amet?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, amet?</div>
+    </div>
+
+</body>
+
+</html>
